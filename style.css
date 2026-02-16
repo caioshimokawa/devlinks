@@ -73,7 +73,7 @@ body * {
   z-index: 1;
   transform: translateY(-50%);
   animation: slide-back 0.2s;
-  transition: outline 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out;
 }
 
 .light #switch button {
@@ -81,7 +81,7 @@ body * {
 }
 
 #switch button:hover {
-  outline: 8px solid var(--highlight-color);
+  box-shadow: 0 0 0 8px var(--highlight-color);
 }
 
 #switch span {
