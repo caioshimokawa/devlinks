@@ -5,10 +5,16 @@ function toggleMode() {
   //pegar a tag img
   const img = document.querySelector("#profile img")
 
-  //substituir a imagem
-  if (html.classList.contains("light")) {
-    img.setAttribute("src", "assets/avatar-light.png")
-  } else {
-    img.setAttribute("src", "assets/avatar.png")
-  }
+  //aplicar efeito de fade
+  img.style.opacity = "0"
+
+  //aguardar a transição e substituir a imagem
+  setTimeout(() => {
+    if (html.classList.contains("light")) {
+      img.setAttribute("src", "assets/avatar-light.png")
+    } else {
+      img.setAttribute("src", "assets/avatar.png")
+    }
+    img.style.opacity = "1"
+  }, 300)
 }
